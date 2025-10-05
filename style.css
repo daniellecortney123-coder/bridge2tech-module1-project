@@ -1,0 +1,188 @@
+
+* {     
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html { 
+     scroll-behavior: smooth;
+}    
+   
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #0b0033, #1a003f);
+    color: rgb(21, 29, 104);
+}
+
+.nav {  
+    width: 100%;
+    display: flex;
+    justify-content: space-betwwen;
+    align-items: center;
+    padding: 15px 50px;
+    background: linear-gradient(90deg, #ff00ff, #00f2ff);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+    
+.nav .logo {    
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5rem;
+
+}
+.nav ul li a {  
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+
+}
+
+.nav ul li a:hoover {   
+    color: #0b0033;
+
+}
+
+/* Mobile menu toggle*/
+.menu-toggle { 
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {     
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    border-radius: 3px;
+
+}
+
+/* ------------ Hero Section ------------- */
+.hero, second-hero {    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-color:white;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {     
+    background: url("images/Star.png") no-repeat center center/cover;
+}
+
+.second-hero {  
+    background: url("images/Star.png") no repeat center center/cover;
+
+}
+
+.hero::after,  .second-hero::after {  
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(11,  0,  51, 0.6);
+}
+
+.hero-content {     
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.hero h1 {  
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: rem;
+    color: #fff0ff;
+    margin-bottom: 15px;
+}
+
+   .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #a9faff;
+}
+   
+.btn {  
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #ff00ff, #00f2ff);
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: transorm 0.3s;
+}
+
+.btn:hoover {   
+    transform: scale(1.05);
+}
+
+/* Navigation */
+.nav ul {   
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #ff00ff, #00f2ff);
+    padding: 10px;
+}
+.nav ul li {    
+    margin: 0 15 px;
+
+}
+
+.nav ul li a {   
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {    
+    color: #0b0033;
+}
+
+/* Grid Section */
+.grid-container {   
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+     padding: 20px;
+     flex: 1;
+}
+
+.grid-item:hover {  
+
+
+    transform: sale(1.05);
+    background: linear-gradient(90deg, #ff00ff, #00f2ff);
+
+}
+.footer {   
+    background:yellow;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+h2 {    
+
+    color: #ff66ff;
+} 
+
+        
+  
