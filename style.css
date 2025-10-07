@@ -10,17 +10,20 @@ html {
      scroll-behavior: smooth;
 }    
    
-.body {
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0b0033, #1a003f);
+    color: #fff;
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(135deg, #0b0033, #1a003f);
-    color: rgb(21, 29, 104);
+    min-height: 100vh;
+    
 }
 
+/* ------- NAVIGATION ----> 
+
 .nav {  
-    width: 100%;
     display: flex;
     justify-content: space-betwwen;
     align-items: center;
@@ -29,19 +32,29 @@ html {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-    
-.nav .logo {    
-    font-weight: bold;
-    color: #fff;
-    font-size: 1.5rem;
 
 }
-.nav ul li a {  
-    color: #fff;
-    text-decoration: none;
+.logo {
+    font-size: 1.5rem;    
     font-weight: bold;
-    transition: color 0.3s;
+    letter-spacing: 1px;
+    color: #fff;
+    
+}
+
+
+.nav-links {  
+    list-style: none;
+    display: flex;
+    gap: 25px;
+
+}
+
+.nav-links li a { 
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
 
 }
 
@@ -50,139 +63,215 @@ html {
 
 }
 
-/* Mobile menu toggle*/
-.menu-toggle { 
-    display: none; 
+/* --------- MOBILE MENU BUTTON ---- */
+
+.menu toggle {  
+    display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 5px;
 }
 
-.menu-toggle .bar {     
+.bar {  
     height: 3px;
     width: 25px;
-    background-color: white;
-    border-radius: 3px;
+    background: fff;
+    margin: 4px 0;
+    border-radius: 5px;
 
-}
+} 
 
-/* ------------ Hero Section ------------- */
-.hero, second-hero {    
+
+/* ------------ HERO SECTIONS ------------- */
+.hero {   
+    background: url("images/Star.png") no repeat center
+center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
     position: relative;
-    border-color:white;
-    background-size: cover;
-    background-position: center;
-}
-
-.hero {     
-    background: url("images/Star.png") no-repeat center center/cover;
-}
-
-.second-hero {  
-    background: url("images/Star.png") no repeat center center/cover;
 
 }
 
-.hero::after,  .second-hero::after {  
+.hero::after {  
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: rgba(11,  0,  51, 0.6);
+    z-index: 0;
 }
 
 .hero-content {     
     position: relative;
     z-index: 1;
     max-width: 700px;
+    padding: 20px;
 }
 
-.hero h1 {  
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: rem;
+.hero h2 {  
+    font-size: 2.5rem;
+    margin-bottom: 10px;
     color: #fff0ff;
+
+}
+
+.hero h3 {  
+    font-size: 1.8rem;
+    color: #a9faff;
+    margin-bottom: 10px;
+
+}
+
+   .hero h4 {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    
+}
+
+/* SECCOND HERO SECTION */
+.second-hero {  
+    background: url("images/TechBackground.png") no repeat center
+center/cover;
+     height: 70vh;
+}
+
+/* --------- BUTTONS --------*/
+
+.btn {  
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #ff00ff, #00f2ff);
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transorm 0.3s ease, opacity 0.3s ease;
+}
+
+.btn:hover {   
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ---------- GRID CONTENT SECTIONS ------- */
+.grid-container {  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px 20 px;
+    background: rgba(255, 255, 255, 0.05);
+    flex: 1; 
+
+}
+
+.grid-item {    
+    background: rgba( 255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, background  0.3s ease;
+}
+
+.grid-item:hover {   
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #ff00ff, #00f2ff);
+}
+
+.grid-item h2 {    
+    color: #ff66ff;
     margin-bottom: 15px;
 }
 
-   .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #a9faff;
-}
-   
-.btn {  
-    display: inline-block;
-    padding: 12px 25px;
-    background: linear-gradient(90deg, #ff00ff, #00f2ff);
-    color: whitesmoke;
-    font-weight: bold;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: transorm 0.3s;
-}
-
-.btn:hoover {   
-    transform: scale(1.05);
-}
-
-/* Navigation */
-.nav ul {   
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(90deg, #ff00ff, #00f2ff);
-    padding: 10px;
-}
-.nav ul li {    
-    margin: 0 15 px;
-
-}
-
-.nav ul li a {   
+.grid-item p  {   
     color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s;
 }
 
-.nav ul li a:hover {    
-    color: #0b0033;
-}
-
-/* Grid Section */
-.grid-container {   
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-     gap: 20px;
-     padding: 20px;
-     flex: 1;
-}
-
-.grid-item:hover {  
-
-
-    transform: sale(1.05);
-    background: linear-gradient(90deg, #ff00ff, #00f2ff);
-
-}
-.footer {   
-    background:yellow;
+/* ------- CONNECT SECTION ---- */
+.connect {  
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 60px 20 px;
+    background: linear-gradient(135deg, #1a003f, #0b0033);
 }
 
-h2 {    
-
+.connect h2 {   
+    font-size: 2rem;
     color: #ff66ff;
+    margin-bottom: 10 px;
+}
+
+.connect p{ 
+
+    color: #a9faff;
+    margin-bottom: 20px;
+
+}
+/* -------- FOOTER ------ */
+.footer {   
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+
+}
+
+/* --------- RESPONSIVE DESIGN ----- */
+
+@media (max-width: 768px) { 
+    .nav-links {    
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(180deg, #ff00ff, #ff00ff, #00f2ff);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+.nav-links.active {     
+    display: flex;
+
+}
+
+.menu-toggle {  
+    display: flex;
+
+}
+
+.hero h2 {
+    font-size: 2rem;
+
+}
+
+.hero h3 {  
+    font-size: 1rem;
+
+ }
+
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         
   
